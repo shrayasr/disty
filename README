@@ -1,0 +1,6 @@
+# disty
+> The distribution manager from hell
+
+I got really bored of redownloading things like bootstrap, w2ui, jquery, etc in all my projects and i *dont* want to use things like bower for this because I don't want to install nodejs for just this. 
+
+Ergo, a shell script. Voila

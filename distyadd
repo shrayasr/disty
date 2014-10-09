@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]
+then
+  echo "Invalid input"
+  echo "Usage: distyadd <archive to add> <distribution name>"
+  exit 1
+fi
+
+DIST_TO_ADD=$(cd $(dirname "$1") && pwd -P)/$(basename "$1")
+DIST_NAME=$(echo $2 | tr '[A-Z]' '[a-z]')
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $SCRIPT_DIR
+source disty_constants
+
+cd $DIST_DIR
+if [ -d $DIST_NAME ]
+then
+  echo "Distribution \"$DIST\" already exists"
+else
+  mkdir $DIST_NAME
+  cp $DIST_TO_ADD $DIST_NAME/
+fi

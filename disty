@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DIST=$(echo $1 | tr '[A-Z]' '[a-z]')
+DEST_DIR=$(pwd)
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $SCRIPT_DIR
+source disty_constants
+
+cd $DIST_DIR
+if [ -d $DIST ] 
+then
+  cp $DIST_DIR/$DIST/* $DEST_DIR
+else
+  echo "Distribution \"$DIST\" not found"
+fi
