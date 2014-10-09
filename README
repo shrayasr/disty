@@ -1,16 +1,22 @@
-# disty
-> The distribution manager from hell
+     _ _     _         
+  __| (_)___| |_ _   _ 
+ / _` | / __| __| | | |
+| (_| | \__ \ |_| |_| | - The distribution manager from hell
+ \__,_|_|___/\__|\__, |
+                 |___/  
 
 I got really bored of redownloading things like bootstrap, w2ui, jquery, etc in all my projects and i *dont* want to use things like bower for this because I don't want to install nodejs for just this. 
 
 Ergo, a shell script. BOOM.
 
-# To use
+##########
+# To use #
+##########
 
-## Adding a distribution archive
+# Adding a distribution archive
 
-distyadd </path/to/archive> <distribution_name>
+	distyadd </path/to/archive> <distribution_name>
 
-## Copying an existing distribution to current dir
+# Copying an existing distribution to current dir
 
-disty <distribution_name>
+	disty <distribution_name>
