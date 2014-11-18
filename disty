@@ -10,7 +10,7 @@ source disty_constants
 cd $DIST_DIR
 if [ -d $DIST ] 
 then
-  cp $DIST_DIR/$DIST/* $DEST_DIR
+  cp -r $DIST_DIR/$DIST/* $DEST_DIR
 else
   echo "Distribution \"$DIST\" not found"
 fi
